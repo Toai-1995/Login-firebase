@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "875728191089",
+    "project_id": "authen-login-a14a7",
+    "storage_bucket": "authen-login-a14a7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:875728191089:android:83024d568574a2df1c25d0",
+        "android_client_info": {
+          "package_name": "com.loginform"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "875728191089-qeoiarbr4fqdhgf1r8dp39upb1fghvdo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQkHf3Q6isJvG2j1ZvFZmP65mB6wRKToc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "875728191089-qeoiarbr4fqdhgf1r8dp39upb1fghvdo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
