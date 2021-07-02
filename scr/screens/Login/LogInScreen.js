@@ -17,7 +17,7 @@ const LogInScreen = props => {
 
   const handleLogIn = () => {
     if (password === '' || email === '') {
-      return setMessage('hãy nhập đầy đủ thông tin');
+      return setMessage('Hãy nhập đầy đủ thông tin.');
     }
     auth()
       .signInWithEmailAndPassword(email, password)
@@ -28,7 +28,7 @@ const LogInScreen = props => {
         navigation.navigate('webview')
       })
       .catch(err => {
-        setMessage('User or password not correct');
+        setMessage('Email hoặc mật khẩu không đúng.');
         setIsLogedIn(false);
         console.log(err);
       });
@@ -39,20 +39,20 @@ const LogInScreen = props => {
       <View style={styles.inputView}>
         <TextInput
           style={styles.textInput}
-          placeholder={'Mật khẩu'}
-          value={password}
-          onChangeText={text => setPassword(text)}
-          secureTextEntry={true}
-        />
-      </View>
-      <View style={styles.inputView}>
-        <TextInput
-          style={styles.textInput}
           placeholder={'Email'}
           secureTextEntry={true}
           value={email}
           keyboardType={'email-address'}
           onChangeText={text => setEmail(text)}
+        />
+      </View>
+      <View style={styles.inputView}>
+        <TextInput
+          style={styles.textInput}
+          placeholder={'Mật khẩu'}
+          value={password}
+          onChangeText={text => setPassword(text)}
+          secureTextEntry={true}
         />
       </View>
       <View>

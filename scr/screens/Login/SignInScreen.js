@@ -26,10 +26,10 @@ const SignInScreen = props => {
     //   return setMessage('email không đúng');
     // };
     if(email === '' || password === '' || username === '' ){
-      return setMessage('hãy nhập đầy đủ thông tin');
+      return setMessage('Hãy nhập đầy đủ thông tin.');
     };
     if (password.length < 8) {
-      return setMessage('mật khẩu phải nhiểu hơn 8 kí tự');
+      return setMessage('Mật khẩu phải nhiểu hơn 8 kí tự.');
     };
     auth()
       .createUserWithEmailAndPassword(email, password)
@@ -43,10 +43,10 @@ const SignInScreen = props => {
       })
       .catch(error => {
         if (error.code === 'auth/email-already-in-use') {
-          setMessage('email đã được sử dụng');
+          setMessage('Email đã được sử dụng.');
         }
         if (error.code === 'auth/invalid-email') {
-          setMessage('email không đúng');
+          setMessage('Email không đúng.');
         }
       });
   };
@@ -64,20 +64,20 @@ const SignInScreen = props => {
       <View style={styles.inputView}>
         <TextInput
           style={styles.textInput}
-          placeholder={'Mật khẩu'}
-          value={password}
-          onChangeText={text => setPassword(text)}
-          secureTextEntry={true}
-        />
-      </View>
-      <View style={styles.inputView}>
-        <TextInput
-          style={styles.textInput}
           placeholder={'Email'}
           secureTextEntry={true}
           value={email}
           keyboardType={'email-address'}
           onChangeText={text => setEmail(text)}
+        />
+      </View>
+      <View style={styles.inputView}>
+        <TextInput
+          style={styles.textInput}
+          placeholder={'Mật khẩu'}
+          value={password}
+          onChangeText={text => setPassword(text)}
+          secureTextEntry={true}
         />
       </View>
       <View>
