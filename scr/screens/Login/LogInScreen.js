@@ -22,10 +22,10 @@ const LogInScreen = props => {
     auth()
       .signInWithEmailAndPassword(email, password)
       .then(userCredential => {
-        console.log(userCredential.user);
+        console.log(userCredential);
         setIsLogedIn(true);
         // setMessage('Log in success');
-        navigation.navigate('webview')
+        navigation.navigate('webview', {param: false});
       })
       .catch(err => {
         setMessage('Email hoặc mật khẩu không đúng.');

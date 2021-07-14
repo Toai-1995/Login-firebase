@@ -25,7 +25,7 @@ const SignInScreen = props => {
     // if (reg.test(email) === false) {
     //   return setMessage('email không đúng');
     // };
-    if(email === '' || password === '' || username === '' ){
+    if (email === '' || password === '' || username === '') {
       return setMessage('Hãy nhập đầy đủ thông tin.');
     };
     if (password.length < 8) {
@@ -34,7 +34,6 @@ const SignInScreen = props => {
     auth()
       .createUserWithEmailAndPassword(email, password)
       .then(() => {
-        console.log('login success');
         navigation.navigate('login');
         setMessage('');
         setUsername('');

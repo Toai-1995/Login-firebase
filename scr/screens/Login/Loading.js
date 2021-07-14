@@ -4,6 +4,7 @@ import auth from '@react-native-firebase/auth';
 
 const Loading = props => {
   const {navigation} = props;
+
   useEffect(() => {
     auth().onAuthStateChanged(user => {
       user ? navigation.navigate('webview') : navigation.navigate('login')
@@ -12,7 +13,7 @@ const Loading = props => {
   return(
     <View style={styles.container}>
       <Text style={styles.text}>Loading</Text>
-      <ActivityIndicator  size="large" color="#00ff00" />
+      <ActivityIndicator size="large" color="#00ff00" />
     </View>
   );
 };
