@@ -32,7 +32,7 @@ const WebScreen = props => {
       <View style={styles.webview}>
         <WebView source={{uri: 'https://g3.gooc.us/app/'}} />
       </View>
-      {true && (
+      {!route.params && (
         <View style={{position: 'absolute', top: 55, zIndex: 1}}>
           <View
             style={{
