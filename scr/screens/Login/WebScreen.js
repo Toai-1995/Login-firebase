@@ -18,7 +18,6 @@ let windowHeight = Dimensions.get('window').height;
 
 const WebScreen = props => {
   const {navigation, route} = props;
-  // console.log('param', route.params.param);
   const logOut = () => {
     auth()
       .signOut()
@@ -32,30 +31,37 @@ const WebScreen = props => {
       <View style={styles.webview}>
         <WebView source={{uri: 'https://g3.gooc.us/app/'}} />
       </View>
-      {!route.params && (
-        <View style={{position: 'absolute', top: 55, zIndex: 1}}>
-          <View
-            style={{
-              justifyContent: 'center',
-              alignItems: 'center',
-              backgroundColor: '#fff',
-              height: windowHeight - 55,
-              width: windowWidth,
-              opacity: 1,
-            }}>
-            <Pressable style={styles.button}>
-              <Text
-                style={styles.text}
-                onPress={() => {
-                  console.log('update');
-                  navigation.navigate('update');
-                }}>
-                Nâng cấp
-              </Text>
-            </Pressable>
-          </View>
-        </View>
-      )}
+      {/*{!route.params && (*/}
+      {/*  <View style={{position: 'absolute', top: 55, zIndex: 1}}>*/}
+      {/*    <View*/}
+      {/*      style={{*/}
+      {/*        justifyContent: 'center',*/}
+      {/*        alignItems: 'center',*/}
+      {/*        backgroundColor: '#fff',*/}
+      {/*        height: windowHeight - 55,*/}
+      {/*        width: windowWidth,*/}
+      {/*        opacity: 1,*/}
+      {/*      }}>*/}
+      {/*      <Pressable style={styles.button}>*/}
+      {/*        <Text*/}
+      {/*          style={styles.text}*/}
+      {/*          onPress={() => {*/}
+      {/*            navigation.navigate('update');*/}
+      {/*          }}>*/}
+      {/*          Nâng cấp*/}
+      {/*        </Text>*/}
+      {/*      </Pressable>*/}
+      {/*      <Pressable style={styles.button}>*/}
+      {/*        <Text style={styles.text}*/}
+      {/*          onPress={() => {*/}
+      {/*            navigation.navigate('update');*/}
+      {/*          }}>*/}
+      {/*          Nâng cấp*/}
+      {/*        </Text>*/}
+      {/*      </Pressable>*/}
+      {/*    </View>*/}
+      {/*  </View>*/}
+      {/*)}*/}
 
       {/*<View>*/}
       {/*  <View style={{flexDirection: 'row', alignSelf: 'center', backgroundColor : '#fff'}}>*/}

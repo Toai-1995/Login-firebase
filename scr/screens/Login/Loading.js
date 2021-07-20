@@ -1,13 +1,12 @@
-import React, { useEffect } from "react";
+import React, {useEffect} from 'react';
 import {View, Text, ActivityIndicator, StyleSheet} from 'react-native';
 import auth from '@react-native-firebase/auth';
 
 const Loading = props => {
   const {navigation} = props;
-
   useEffect(() => {
     auth().onAuthStateChanged(user => {
-      user ? navigation.navigate('webview') : navigation.navigate('login')
+      user ? navigation.navigate('webview') : navigation.navigate('login');
     })
   },[])
   return(

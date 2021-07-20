@@ -26,10 +26,14 @@ const LogInScreen = props => {
         setIsLogedIn(true);
         // setMessage('Log in success');
         navigation.navigate('webview', {param: false});
+        setPassword('');
+        setEmail('');
       })
       .catch(err => {
         setMessage('Email hoặc mật khẩu không đúng.');
         setIsLogedIn(false);
+        setPassword('');
+        setEmail('');
         console.log(err);
       });
   };
@@ -55,11 +59,11 @@ const LogInScreen = props => {
           secureTextEntry={true}
         />
       </View>
-      <View>
-        <Text style={isLogedIn ? styles.messageSuccess : styles.messageFail}>
-          {message}
-        </Text>
-      </View>
+      {/*<View>*/}
+      {/*  <Text style={isLogedIn ? styles.messageSuccess : styles.messageFail}>*/}
+      {/*    {message}*/}
+      {/*  </Text>*/}
+      {/*</View>*/}
       {/*<TouchableOpacity>*/}
       {/*  <Text style={styles.forgot}>Forgot your password?</Text>*/}
       {/*</TouchableOpacity>*/}
